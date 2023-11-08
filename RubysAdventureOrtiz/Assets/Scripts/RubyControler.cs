@@ -14,10 +14,11 @@ public class RubyControler : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        Debug.Log(horizontal);
+        float Vertical = Input.GetAxis("Vertical");
 
-       Vector2 position = transform.position;
+        Vector2 position = transform.position;
         position.x = position.x + 0.1f * horizontal;
+        position.y = position.y + 0.1f * Vertical;
         transform.position = position;
     }
 }
