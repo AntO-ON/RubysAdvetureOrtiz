@@ -7,7 +7,7 @@ public class RubyControler : MonoBehaviour
 {
     public float speed = 3.0f;
     public int maxHealth = 5;
-    int current health;
+    int currentHealth;
     
 
     Rigidbody2D rigidbody2d;
@@ -36,7 +36,7 @@ public class RubyControler : MonoBehaviour
     }
     void changeHealth(int amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth, amount, 0, maxHealth);
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
     }
 }
