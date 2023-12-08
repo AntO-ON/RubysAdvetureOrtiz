@@ -7,7 +7,8 @@ public class RubyControler : MonoBehaviour
 {
     public float speed = 3.0f;
     public int maxHealth = 5;
-    int currentHealth = 1;
+    public int currentHealth = 1;
+
     
 
     Rigidbody2D rigidbody2d;

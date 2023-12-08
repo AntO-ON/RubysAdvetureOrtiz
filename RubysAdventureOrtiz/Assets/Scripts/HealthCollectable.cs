@@ -9,10 +9,12 @@ public class HealthCollectable : MonoBehaviour
         RubyControler controller = other.GetComponent<RubyControler>();
         if (controller != null)
         {
-            if(controller.
-            controller.ChangeHealth(1)
-            Destroy(gameObject);
+            if (controller.currentHealth < controller.maxHealth)
+            {
+                controller.ChangeHealth(1);
+                Destroy(gameObject);
+            }
+            Debug.Log("Object that entered the trigger is: " + other);
         }
-      Debug.Log("Object that entered the trigger is: " + other);  
     }
-}
+}    
