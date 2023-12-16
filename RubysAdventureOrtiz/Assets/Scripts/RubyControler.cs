@@ -7,13 +7,14 @@ public class RubyControler : MonoBehaviour
 {
     public float speed = 3.0f;
     public int maxHealth = 5;
-    public int currentHealth = 1;
+    public int Health { get { return currentHealth; } }
+    public int currentHealth;
 
     
 
     Rigidbody2D rigidbody2d;
     float horizontal;
-    float vertical;
+    float vertical;       
     // Start is called before the first frame update
     void Start()
     {
